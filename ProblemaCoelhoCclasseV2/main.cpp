@@ -1,7 +1,7 @@
 #include <iostream>
 #include <list>
 
-#include"coelho.h"
+#include"listacoelho.h"
 
 using namespace std;
 
@@ -28,25 +28,14 @@ int contagem( int n )
 
 int main()
 {
-    coelho::coelhos C1={coelho.macho,coelho.nGravida,0},C2={coelho.femea,coelho.nGravida,0};
-    coelho::coelhos i[]={C1,C2};
-    list <coelho::coelhos> C(i,i+sizeof(coelho::coelhos)/sizeof(coelho::coelhos));
+    listaCoelho lista;
     int n;
-    int totalCoelhos=2;
     cout << "Digite o numero de meses:\n";
     cin >> n;
     if (n <0){ cout << "Digite um número maior ou igual a zero de meses.\n";}
     else{
-        for(int tempo=0; tempo<n; tempo++){
-            for (list<coelho::coelhos>::iterator it = C.begin(); it != C.end(); it++){
-                coelho.avancarIdade(*it);
-             }
-            for (list<coelho::coelhos>::iterator it = C.begin(); it != C.end(); it++){
-                coelho::crescerLista(&C,totalCoelhos);
-             }
-        }
+    int resultado = lista.listaFinalCoelho(n);
+    cout<<"O total de coelhos apos "<< n<<" meses eh "<<resultado<<".";
     }
-
-
     return 0;}
 

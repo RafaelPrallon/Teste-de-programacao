@@ -4,8 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    coelho.cpp
+    coelho.cpp \
+    listacoelho.cpp
 
 HEADERS += \
-    coelho.h
+    coelho.h \
+    listacoelho.h
 
